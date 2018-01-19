@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95C636272010B02C004DA45B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95C636262010B02C004DA45B /* main.cpp */; };
 		95C6362F2010B05D004DA45B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C6362E2010B05D004DA45B /* GLUT.framework */; };
 		95C636312010B063004DA45B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C636302010B063004DA45B /* OpenGL.framework */; };
 		95C636332010B067004DA45B /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C636322010B067004DA45B /* GLKit.framework */; };
+		95C636352010B127004DA45B /* opengl_cgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95C636342010B127004DA45B /* opengl_cgr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 
 /* Begin PBXFileReference section */
 		95C636232010B02C004DA45B /* s1610238019_Geissbauer_MTD215_06 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = s1610238019_Geissbauer_MTD215_06; sourceTree = BUILT_PRODUCTS_DIR; };
-		95C636262010B02C004DA45B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		95C6362E2010B05D004DA45B /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		95C636302010B063004DA45B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		95C636322010B067004DA45B /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		95C636342010B127004DA45B /* opengl_cgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_cgr.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 		95C636252010B02C004DA45B /* s1610238019_Geissbauer_MTD215_06 */ = {
 			isa = PBXGroup;
 			children = (
-				95C636262010B02C004DA45B /* main.cpp */,
+				95C636342010B127004DA45B /* opengl_cgr.cpp */,
 			);
 			path = s1610238019_Geissbauer_MTD215_06;
 			sourceTree = "<group>";
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C636272010B02C004DA45B /* main.cpp in Sources */,
+				95C636352010B127004DA45B /* opengl_cgr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
