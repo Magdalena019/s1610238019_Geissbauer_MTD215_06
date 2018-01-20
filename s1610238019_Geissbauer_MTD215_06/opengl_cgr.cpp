@@ -95,14 +95,15 @@ void description()
 void createArmWithSphere()
 {
     glPushMatrix();
-    glColor3f(0.9, 0.9, 0.0);
+    //glColor3f(0.9, 0.9, 0.0);
     glScaled(3.0, 1, 1);
     glutSolidCube(1);
     //glutWireCube(1);
     glPopMatrix();
     
     glPushMatrix();
-    glColor3f(0.0, 0.0, 0.0); // TODO: Change color
+    
+    //glColor3f(0.0, 0.0, 0.0); // TODO: Change color
     glTranslatef(-1.5, 0, 0);
     glutSolidSphere(0.8, 10, 10);
     //glutWireSphere(0.8, 10, 10);
@@ -128,36 +129,36 @@ void createBucket()
 
 void createExcavatorArmAndBucket () {
     glPushMatrix();
-    glRotatef(-45, 0, 0, 1);
+        glRotatef(-45, 0, 0, 1);
     
-    createArmWithSphere();
-    glTranslatef(-1.5, 0, 0);
-    glRotatef(first, 0, 0, 1);
-    glTranslatef(1.5, 0, 0);
+        createArmWithSphere();
+        glTranslatef(-1.5, 0, 0);
+        glRotatef(first, 0, 0, 1);
+        glTranslatef(1.5, 0, 0);
     
-    glTranslatef(-1.5, 0, 0);
-    glRotatef(40, 0, 0, 1);
-    glTranslatef(-1.5, 0, 0);
+        glTranslatef(-1.5, 0, 0);
+        glRotatef(40, 0, 0, 1);
+        glTranslatef(-1.5, 0, 0);
     
-    createArmWithSphere();
-    glTranslatef(-1.5, 0, 0);
-    glRotatef(second, 0, 0, 1);
-    glTranslatef(1.5, 0, 0);
+        createArmWithSphere();
+        glTranslatef(-1.5, 0, 0);
+        glRotatef(second, 0, 0, 1);
+        glTranslatef(1.5, 0, 0);
     
-    glTranslatef(-1.5, 0, 0);
-    glRotatef(80, 0, 0, 1);
-    glTranslatef(-1.5, 0, 0);
+        glTranslatef(-1.5, 0, 0);
+        glRotatef(80, 0, 0, 1);
+        glTranslatef(-1.5, 0, 0);
     
-    createArmWithSphere();
-    glTranslatef(-1.5, 0, 0);
-    glRotatef(bucket, 0, 0, 1);
-    glTranslatef(1.5, 0, 0);
+        createArmWithSphere();
+        glTranslatef(-1.5, 0, 0);
+        glRotatef(bucket, 0, 0, 1);
+        glTranslatef(1.5, 0, 0);
     
-    glColor3f(0.9, 0.9, 0.0);
-    glTranslatef(-1.3, 0, 0);
-    glRotatef(90, 0, 0, 1);
-    glTranslatef(-0.4, 0.6, 0);
-    createBucket();
+        //glColor3f(0.9, 0.9, 0.0);
+        glTranslatef(-1.3, 0, 0);
+        glRotatef(90, 0, 0, 1);
+        glTranslatef(-0.4, 0.6, 0);
+        createBucket();
     
     glPopMatrix();
 }
@@ -205,7 +206,7 @@ void drawExcavator()
     createExcavatorArmAndBucket();
 
     
-    glColor3f(0.0, 0.0, 0.0);
+    //glColor3f(0.0, 0.0, 0.0);
     glPushMatrix();
     glTranslatef(1, -2, -3);
     createWheels();
@@ -213,11 +214,11 @@ void drawExcavator()
     createWheels();
     glPopMatrix();
     
-    glColor3f(0.9, 0.9, 0.0);
+    //glColor3f(0.9, 0.9, 0.0);
     glTranslatef(1, -0.35, 0);
     createExcavatorCabin();
     
-    glColor3f(1.0, 0.0, 0.0);
+    //glColor3f(1.0, 0.0, 0.0);
     glPushMatrix();
     glTranslatef(0, -1, -1);
     createWheels();
@@ -230,7 +231,7 @@ void drawExcavator()
 void drawSurface()
 {
     glPushMatrix();
-    glColor3f(0.2, 0.2, 0.2);
+    // glColor3f(0.2, 0.2, 0.2);
     glTranslatef(0, -2, -15);
     glScaled(25, 0.1, 10);
     glutSolidCube(1);
@@ -252,12 +253,13 @@ static void init(void)
     glEnable(GL_LIGHT0);
     //glEnable(GL_LIGHT1);
     
+    /*
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, materialSpecular);
     glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, materialShininess);
     
     glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, red);
     glMaterialf(GL_FRONT_AND_BACK, GL_DIFFUSE, green[3]);
-    
+    */
      
     //initialize view
     glMatrixMode(GL_PROJECTION);
@@ -309,6 +311,7 @@ static void display(void)
 	renderSphere(0.5, 0, 2, 0.0);
      */
     
+    setMaterial(red, darkGray);
     glTranslatef(move, 0, 0);
     drawExcavator();
     
